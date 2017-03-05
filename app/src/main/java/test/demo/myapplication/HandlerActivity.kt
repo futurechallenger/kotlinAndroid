@@ -8,7 +8,11 @@ import android.util.Log
 
 class HandlerActivity : AppCompatActivity() {
   private var _handler: Handler = object : Handler() {
-    override fun handleMessage(msg: Message) = Unit
+    override fun handleMessage(msg: Message) {
+      if(msg.what == 0x123) {
+        // do something
+      }
+    }
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
