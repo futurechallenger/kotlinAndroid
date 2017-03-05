@@ -11,6 +11,7 @@ import android.widget.ListView
 
 import test.demo.myapplication.RelativeActivity
 import test.demo.myapplication.FrameActivity
+import test.demo.myapplication.DrawerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     _listView = findViewById(R.id.listView) as ListView
     _listView!!.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayOf(
-            "FrameLayout", "RelativeLayout", "ScrollView", "ListView"
+            "FrameLayout", "RelativeLayout", "ScrollView", "ListView", "Drawer"
     ))
     _listView!!.setOnItemClickListener { parent, view, position, id ->
       var t: Intent? = null
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         1 -> t = Intent(this, RelativeActivity::class.java)
         2 -> t = Intent(this, ScrollActivity::class.java)
         3 -> t = Intent(this, ListViewActivity::class.java)
+        4 -> t = Intent(this, DrawerActivity::class.java)
       }
 
       if (t != null) {
