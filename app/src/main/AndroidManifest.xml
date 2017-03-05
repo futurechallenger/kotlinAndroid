@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".DrawerActivity">
         </activity>
+        <activity android:name=".HandlerActivity">
+        </activity>
     </application>
 
 </manifest>
