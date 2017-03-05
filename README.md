@@ -4,7 +4,7 @@ Demos for building android apps with kotlin.
 ## ListView
 A list view with `BaseAdapter` as its adapter. And handle list item click handler.
 ```kotlin
-	class CelebrityAdapter(var celebrityList: Array<Celebrity>, val context: Context) : BaseAdapter() {
+class CelebrityAdapter(var celebrityList: Array<Celebrity>, val context: Context) : BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
       var view: View? = null
       val viewHolder: ListRowHolder
@@ -45,6 +45,7 @@ A list view with `BaseAdapter` as its adapter. And handle list item click handle
       this.subtitleTextView = row?.findViewById(R.id.subtitleTextView) as TextView
     }
   }
+}
 ```
 Customized `BaseAdapter` `CelebrityAdapter`. Optimize the list view performance with a *Row Holder* `ListRowHolder`.
 
