@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="test.demo.myapplication.RelativeActivity">
+
+    <View
+        android:id="@+id/header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_orange_light"/>
+
+    <View
+        android:id="@+id/goon"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/header"
+        android:layout_toLeftOf="@id/goon"
+        android:layout_toRightOf="@id/header"
+        android:text="header text"/>
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/header"
+        android:text="sub title text are here"
+        android:layout_toLeftOf="@id/goon"
+        android:layout_toRightOf="@id/header"/>
+
+
+</RelativeLayout>
