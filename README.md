@@ -59,3 +59,16 @@ Customized `BaseAdapter` `CelebrityAdapter`. Optimize the list view performance 
     }
   }
 ```
+Every 200 ms, send a message to handler:
+```kotlin
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_handler)
+
+    Timer().schedule(object : TimerTask() {
+      override fun run() {
+        _handler.sendEmptyMessage(0x123)
+      }
+    }, 0, 200)
+  }
+```

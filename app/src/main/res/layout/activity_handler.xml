@@ -7,4 +7,12 @@
     android:layout_height="match_parent"
     tools:context="test.demo.myapplication.HandlerActivity">
 
+    <Button
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:onClick="stopHandler"
+        android:text="Stop handler"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
 </android.support.constraint.ConstraintLayout>
