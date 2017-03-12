@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import test.demo.myapplication.okHttp.AsyncActivity
 import test.demo.myapplication.okHttp.SyncActivity
 
 class OKHttp3Activity : AppCompatActivity() {
@@ -19,15 +20,18 @@ class OKHttp3Activity : AppCompatActivity() {
     _listView = findViewById(R.id.listView) as ListView
     _listView!!.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
             listOf("synchronous", "asynchronous", "high level"))
-    _listView!!.setOnItemClickListener { parent, view, position, id ->
+    _listView!!.setOnItemClickListener { _, _, position, _ ->
       Log.i("YO", "item clicked " + position)
       var t: Intent? = null
       when (position) {
         0 -> {
           t = Intent(this, SyncActivity::class.java)
-          startActivity(t)
+        }
+        1 -> {
+          t = Intent(this, AsyncActivity::class.java)
         }
       }
+      startActivity(t)
     }
   }
 }
