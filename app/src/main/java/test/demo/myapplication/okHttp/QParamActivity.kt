@@ -42,9 +42,10 @@ class QParamActivity : AppCompatActivity(), View.OnClickListener {
     urlBuilder.addQueryParameter("username", "octocat")
     var url = urlBuilder.build().toString()
 
-    // headers
+    // headers & post
     var request = Request.Builder()
             .header("Content-Type", "application/json")
+            .method("post", RequestBody.create(null, ""))
             .url(url)
             .build()
 
