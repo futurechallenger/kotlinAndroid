@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="test.demo.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,6 +27,12 @@
         <activity android:name=".DrawerActivity">
         </activity>
         <activity android:name=".HandlerActivity">
+        </activity>
+        <activity android:name=".OKHttp3Activity">
+        </activity>
+        <activity android:name=".okHttp.SyncActivity">
+        </activity>
+        <activity android:name=".okHttp.AsyncActivity">
         </activity>
     </application>
 

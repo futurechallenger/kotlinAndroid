@@ -29,8 +29,6 @@ class HandlerActivity : AppCompatActivity() {
         _handler.sendEmptyMessage(0x123)
       }
     }, 0, 200)
-
-
   }
 
   public fun stopHandler(v: View?) {
