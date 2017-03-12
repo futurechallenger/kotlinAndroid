@@ -37,7 +37,6 @@ class AsyncActivity : AppCompatActivity(), View.OnClickListener {
   }
 
   private fun startRequest() {
-
     var request = Request.Builder().url(_requestUrl).build()
     _client.newCall(request).enqueue(object : Callback {
       override fun onFailure(call: Call?, e: IOException?) {

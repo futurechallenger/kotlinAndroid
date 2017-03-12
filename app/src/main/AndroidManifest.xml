@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".test.Main2Activity">
         </activity>
+        <activity android:name=".okHttp.QParamActivity">
+        </activity>
     </application>
 
 </manifest>
