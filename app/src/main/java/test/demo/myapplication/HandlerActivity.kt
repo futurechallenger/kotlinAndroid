@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.util.Log
-import android.view.View
 import java.util.*
 
 class HandlerActivity : AppCompatActivity() {
@@ -31,7 +30,5 @@ class HandlerActivity : AppCompatActivity() {
     }, 0, 200)
   }
 
-  public fun stopHandler(v: View?) {
-    _timer.cancel()
-  }
+  public fun stopHandler(): Unit = _timer.cancel()
 }

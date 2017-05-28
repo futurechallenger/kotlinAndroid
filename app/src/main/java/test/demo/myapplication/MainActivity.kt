@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import test.demo.myapplication.Rxjava.ReactiveActivity
+import test.demo.myapplication.Rxjava.RxJavaActivity
+import test.demo.myapplication.animation.AnimationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         _listView = findViewById(R.id.listView) as ListView
         _listView!!.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayOf(
                 "FrameLayout", "RelativeLayout", "ScrollView", "ListView", "Drawer",
-                "Handler Message", "ok http", "share", "Light Sensor"
+                "Handler Message", "ok http", "share", "Light Sensor", "animation", "RxJava", "Reactive Views"
         ))
         _listView!!.setOnItemClickListener { _, _, position, _ ->
             var t: Intent? = null
@@ -29,8 +32,10 @@ class MainActivity : AppCompatActivity() {
                 4 -> t = Intent(this, DrawerActivity::class.java)
                 5 -> t = Intent(this, HandlerActivity::class.java)
                 6 -> t = Intent(this, OKHttp3Activity::class.java)
-                7 -> t = Intent(this, ShareActivity::class.java)
-                8 -> t = Intent(this, LightSenorActivity::class.java)
+                7 -> t = Intent(this, LightSenorActivity::class.java)
+                8 -> t = Intent(this, AnimationActivity::class.java)
+                9 -> t = Intent(this, RxJavaActivity::class.java)
+                10 -> t = Intent(this, ReactiveActivity::class.java)
             }
 
             if (t != null) {

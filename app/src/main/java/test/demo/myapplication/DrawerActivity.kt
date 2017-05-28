@@ -16,8 +16,8 @@ class DrawerActivity : AppCompatActivity() {
     val datasource = listOf("Item 1", "Item 2", "Item 3")
     _listView = findViewById(R.id.listView) as ListView
     _listView!!.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datasource)
-    _listView!!.setOnItemClickListener { parent, view, position, id ->
-      Toast.makeText(this, datasource.get(position), Toast.LENGTH_SHORT).show()
+    _listView!!.setOnItemClickListener { _, _, position, _ ->
+      Toast.makeText(this, datasource[position], Toast.LENGTH_SHORT).show()
     }
   }
 }

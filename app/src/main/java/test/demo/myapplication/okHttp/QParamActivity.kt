@@ -68,7 +68,7 @@ class QParamActivity : AppCompatActivity(), View.OnClickListener {
       override fun onResponse(call: Call?, response: Response?) {
         var res = response!!.body().string()
         this@QParamActivity.runOnUiThread {
-          this@QParamActivity._textView!!.text = "code is - " + response!!.code() + " response is " + res
+          this@QParamActivity._textView!!.text = "code is - " + response.code() + " response is " + res
         }
       }
     })

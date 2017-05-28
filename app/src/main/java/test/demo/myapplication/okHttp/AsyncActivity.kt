@@ -48,7 +48,7 @@ class AsyncActivity : AppCompatActivity(), View.OnClickListener {
         var gitResponse = response!!.body().string()
 //        Log.i(TAG, "response :- " + response!!.body().string())
         this@AsyncActivity.runOnUiThread {
-          this@AsyncActivity._textView!!.text = gitResponse + " " + response!!.code()
+          this@AsyncActivity._textView!!.text = gitResponse + " " + response.code()
         }
       }
     })
