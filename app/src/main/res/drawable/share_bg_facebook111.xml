@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/share_bg_facebook"
-    android:insetBottom="0dp"
-    android:insetLeft="15dp"
-    android:insetRight="15dp"
-    android:insetTop="0dp">
-
-</inset>
